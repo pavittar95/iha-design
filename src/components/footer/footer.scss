@@ -1,0 +1,39 @@
+$lightColor: #8896b2;
+
+footer{
+    color: var(--white);
+    .container{
+        padding: 85px 0px 120px;
+        border-top: 1px dashed #22A7F6;
+    }
+    h2{
+        width: 700px;
+        padding-left: 40px;
+        margin-bottom: 70px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            width: 2px;
+            background-image: linear-gradient(#36C994, #22A7F6);
+        }
+    }
+    h3{
+        font-weight: 600;
+    }
+    ul{
+        margin: 20px 0px 80px;
+        li{
+            padding: 10px 0px;
+            a{
+                color: $lightColor;
+            }
+        }
+    }
+    a, h4{
+        color: $lightColor;
+    }
+}

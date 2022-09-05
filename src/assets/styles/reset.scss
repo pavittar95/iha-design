@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style-type: none;
+    padding: 0px;
+}
+img {
+    display: table-cell;
+}
+body, textarea {
+    font-family: 'Albert Sans', sans-serif !important;
+    color: #120d26;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+select::-ms-expand {
+    display: none;
+}
+::-webkit-input-placeholder {
+    font-weight: 400;
+    font-family: 'Albert Sans', sans-serif !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.45) !important;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--white) !important;
+}
