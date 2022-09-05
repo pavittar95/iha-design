@@ -7,7 +7,6 @@ import locationIcon from "../../assets/icons/location.png";
 import circularLinkedinIcon from "../../assets/icons/circular-linkedin.png";
 import boardMemberPatternImg from "../../assets/images/board-member-pattern.png";
 
-
 import teamPerson1 from "../../assets/images/team-person-1.png";
 import teamPerson2 from "../../assets/images/team-person-2.png";
 import teamPerson3 from "../../assets/images/team-person-3.png";
