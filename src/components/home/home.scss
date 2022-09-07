@@ -1,22 +1,310 @@
+.left-gradient{
+    position: relative;
+    padding-left: 45px;
+    @media screen and (max-width: 992px){
+        padding-left: 32px;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 2px;
+        background-image: linear-gradient(#36c994, #22a7f6);
+    }
+}
+.main-heading{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.04em;
+    @media screen and (max-width: 992px){
+        font-size: 40px;
+    }
+}
+.sub-heading{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.33;
+    letter-spacing: -.04em;
+    @media screen and (max-width: 992px){
+        font-size: 40px;
+    }
+}
+
+.sticky-buttons {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    z-index: 9999;
+    .for-web {
+        margin: 25px 0px 0px;
+    }
+    @media screen and (max-width: 992px){
+        display: none;
+    }
+}
+.top-section {
+    background-image: url("../../assets/images/dna-top.svg");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: 90%;
+    background-size: inherit;
+    padding: 270px 0px 150px;
+    max-width: 1550px;
+    margin: auto;
+    h1 {
+        font-size: 80px;
+        font-weight: 800;
+        margin: 25px 0px 40px;
+    }
+    .buttons-cover {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 30px -10px;
+        .btn {
+            margin: 15px;
+            width: 375px;
+        }
+    }
+    .feature-card-list{
+        padding: 80px 0px;
+    }
+    .feature-card {
+        border-radius: 16px;
+        width: 100%;
+        padding: 20px;
+        background-image: url("../../assets/images/feature-card-pattern.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-color: var(--white);
+        h2 {
+            position: relative;
+            font-size: 24px;
+            color: var(--primary);
+            font-weight: bold;
+            padding-left: 16px;
+            margin: 30px 0px 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                width: 2px;
+                background-image: linear-gradient(#36c994, #22a7f6);
+            }
+        }
+    }
+}
+.one-health {
+    padding: 100px 0px;
+    // background-image: url("../../assets/images/way-of-working-top-bg.png");
+    // background-repeat: no-repeat;
+    // background-position-x: -10vw;
+    // background-position-y: -30vw;
+    // background-size: 100%;
+    h1 {
+        position: relative;
+        font-size: 48px;
+        color: var(--white);
+        font-weight: bold;
+        padding-left: 45px;
+        margin: 25px 0px 40px;
+    }
+    .complete-one-health {
+        margin: 80px auto 70px;
+        width: 1036px;
+        max-width: 95%;
+        img {
+            width: 100%;
+            &:first-child {
+                @media screen and (max-width: 576px) {
+                    display: none;
+                }
+            }
+            &:last-child {
+                display: none;
+                @media screen and (max-width: 576px) {
+                    display: block;
+                }
+            }
+        }
+    }
+    .map-image {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    .biorx {
+        .biorx-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            h2 {
+                font-size: 46px;
+                font-weight: 800;
+            }
+            h3 {
+                line-height: 1.9;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.sub-sectors {
+    .container {
+        border-radius: 48px 0px 48px 48px;
+        padding: 80px;
+        background-color: var(--white);
+        margin-top: 120px;
+        background-image: url("../../assets/images/sectors-bg.png");
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: 0px;
+        background-size: 100%;
+        h1 {
+            margin: 25px 0px 40px;
+        }
+        .primary-light {
+            margin-bottom: 70px;
+        }
+    }
+}
+.angel-investing {
+    .container {
+        border-radius: 48px 0px 48px 48px;
+        padding: 80px;
+        background-color: var(--white);
+        margin-top: 120px;
+        background-image: url("../../assets/images/angel-investing-bg.png");
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: 0px;
+        background-size: 100%;
+        h1 {
+            margin: 25px 0px 40px;
+        }
+        .primary-light {
+            margin-bottom: 70px;
+        }
+        .angel-investing-footer {
+            margin-top: 120px;
+            h2 {
+                position: relative;
+                font-size: 46px;
+                padding-left: 150px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    background-image: url("../../assets/icons/three-angles.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: -webkit-fill-available;
+                    height: -webkit-fill-available;
+                    left: 0px;
+                }
+            }
+        }
+    }
+}
+.way-of-working {
+    padding: 100px 0px;
+    background-image: url("../../assets/images/way-of-working-top-bg.png");
+    background-repeat: no-repeat;
+    background-position-x: -10vw;
+    background-position-y: -30vw;
+    background-size: 100%;
+    h1 {
+        margin: 25px 0px 40px;
+    }
+    .working-flow-img {
+        width: 100%;
+        margin-top: 80px;
+        img {
+            width: 100%;
+            &:first-child {
+                @media screen and (max-width: 576px) {
+                    display: none;
+                }
+            }
+            &:last-child {
+                display: none;
+                @media screen and (max-width: 576px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.ecosystem-partners {
+    padding: 100px 0px;
+    background-image: url("../../assets/images/way-of-working-top-bg.png");
+    background-repeat: no-repeat;
+    background-position-x: -10vw;
+    background-position-y: -30vw;
+    background-size: 100%;
+    h1 {
+        margin: 25px 0px 40px;
+    }
+    .carousel {
+        margin: 100px -40px;
+        width: 100%;
+        .partner-cover {
+            width: 100%;
+            background-color: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            margin: 40px;
+            height: 156px;
+            img {
+                width: auto;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+.your-startup {
+    padding: 100px 0px;
+    h1 {
+        margin: 25px 0px 40px;
+    }
+    .primary-light {
+        margin-bottom: 80px;
+    }
+    .color-light {
+        margin-top: 80px;
+        padding-top: 50px;
+        border-top: 1px dashed var(--primary-light);
+        margin-bottom: 30px;
+    }
+}
 .who-we-are {
     border-radius: 48px;
     padding: 80px 0px;
     background-color: var(--white);
+    max-width: 1500px;
+    margin: auto;
     h1 {
-        position: relative;
-        font-size: 56px;
-        font-weight: bold;
-        padding-left: 45px;
         margin-bottom: 55px;
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            bottom: 0px;
-            width: 2px;
-            background-image: linear-gradient(#36c994, #22a7f6);
-        }
     }
     .top-positions {
         li {
@@ -83,6 +371,9 @@
             border-radius: 16px;
             overflow: hidden;
             margin-bottom: 20px;
+            @media screen and (max-width: 576px) {
+                height: 250px;
+            }
             img {
                 width: 100%;
                 height: 100%;
@@ -95,8 +386,7 @@
         }
     }
 }
-
-.mentorship-program{
+.mentorship-program {
     padding: 160px 0px;
     background-image: url("../../assets/images/mentorship-bg.png");
     background-repeat: no-repeat;
@@ -104,39 +394,26 @@
     background-position-y: -30vw;
     background-size: 100%;
 
-    .mentorship-header{
+    .mentorship-header {
         padding-bottom: 80px;
         border-bottom: 1px dashed var(--primary-light);
-        h1{
+        h1 {
             color: var(--white);
             font-weight: 700;
             font-size: 56px;
         }
-        h2{
+        h2 {
             color: #9caabb;
             font-size: 32px;
             font-weight: 500;
         }
     }
-    .offering-body{
+    .offering-body {
         padding-top: 100px;
         h1 {
-            position: relative;
-            font-size: 48px;
-            font-weight: bold;
-            padding-left: 45px;
             margin-bottom: 80px;
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0px;
-                top: 0px;
-                bottom: 0px;
-                width: 2px;
-                background-image: linear-gradient(#36c994, #22a7f6);
-            }
         }
-        h3{
+        h3 {
             font-size: 20px;
             font-size: 700;
             color: var(--white);
@@ -144,10 +421,9 @@
         }
     }
 }
-
 .timeline {
-    .time-line-header{
-        h1{
+    .time-line-header {
+        h1 {
             font-size: 56px;
         }
     }
@@ -208,7 +484,7 @@
                     align-items: center;
                     justify-content: center;
                 }
-                h3{
+                h3 {
                     margin: 10px 0px;
                     color: white;
                     font-weight: 800;
@@ -221,7 +497,6 @@
         }
     }
 }
-
 .subscribe {
     .container {
         border-radius: 48px;
@@ -233,7 +508,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 8vw 11vw 8vw 6vw;
-        @media screen and (min-width: 1500px){
+        @media screen and (min-width: 1500px) {
             padding: 110px 150px 110px 80px;
         }
         h1 {
@@ -255,33 +530,28 @@
                 border: none;
                 width: 400px;
             }
-            img {
+            button{
                 position: absolute;
                 right: 10px;
                 top: 10px;
+                width: auto;
+                height: auto;
+                border: none;
+                outline: none;
+                border-radius: 50%;
+                background-color: transparent;
+                padding: 0px;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
 }
-
 .contact-us {
     padding: 110px 0px;
     h1 {
-        position: relative;
-        font-size: 56px;
-        color: var(--white);
-        font-weight: bold;
-        padding-left: 45px;
         margin-bottom: 55px;
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            bottom: 0px;
-            width: 2px;
-            background-image: linear-gradient(#36c994, #22a7f6);
-        }
     }
     ul {
         li {
@@ -330,6 +600,38 @@
             border-radius: 8px;
             margin: 15px 0px 25px;
             width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .timeline {
+        .timeline-content {
+            ul {
+                padding: 70px 0px;
+                li {
+                    padding-left: 90px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    &::before {
+                        width: 90px;
+                        background-size: 100%;
+                        left: -15px;
+                        height: 29px;
+                        top: 40px;
+                        transform: none;
+                    }
+                    figure {
+                        // transform: scale(.7);
+                        // margin-right: 25px;
+                        img {
+                            margin-left: 0px;
+                        }
+                    }
+                    .number {
+                        margin-top: 20px;
+                    }
+                }
+            }
         }
     }
 }

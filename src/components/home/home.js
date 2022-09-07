@@ -7,6 +7,57 @@ import locationIcon from "../../assets/icons/location.png";
 import circularLinkedinIcon from "../../assets/icons/circular-linkedin.png";
 import boardMemberPatternImg from "../../assets/images/board-member-pattern.png";
 
+import applyAsInvestorImg from "../../assets/images/apply-as-investor.svg";
+import applyAsStartupImg from "../../assets/images/apply-as-startup.svg";
+import watsappIcon from "../../assets/icons/watsapp-logo.svg";
+import linkedinIcon from "../../assets/icons/linkedin-logo.svg";
+
+import featureIcon1 from "../../assets/icons/feature-1.png";
+import featureIcon2 from "../../assets/icons/feature-2.png";
+import featureIcon3 from "../../assets/icons/feature-3.png";
+import featureIcon4 from "../../assets/icons/feature-4.png";
+
+import oneHealthCycleDesk from "../../assets/images/complete-one-health-desk.svg";
+import oneHealthCycleMob from "../../assets/images/complete-one-health-mob.svg";
+import mapImage from "../../assets/images/members-on-map.svg";
+
+import workingFlowImgDesk from "../../assets/images/working-steps-desk.svg";
+import workingFlowImgMob from "../../assets/images/working-steps-mob.svg";
+
+
+import sectorIcon1 from "../../assets/icons/sector-1.png";
+import sectorIcon2 from "../../assets/icons/sector-2.png";
+import sectorIcon3 from "../../assets/icons/sector-3.png";
+import sectorIcon4 from "../../assets/icons/sector-4.png";
+import sectorIcon5 from "../../assets/icons/sector-5.png";
+import sectorIcon6 from "../../assets/icons/sector-6.png";
+import sectorIcon7 from "../../assets/icons/sector-7.png";
+import sectorIcon8 from "../../assets/icons/sector-8.png";
+import sectorIcon9 from "../../assets/icons/sector-9.png";
+import sectorIcon10 from "../../assets/icons/sector-10.png";
+import sectorIcon11 from "../../assets/icons/sector-11.png";
+import sectorIcon12 from "../../assets/icons/sector-12.png";
+
+
+
+import angelInvestingIcon1 from "../../assets/icons/angle-investing-2.png";
+import angelInvestingIcon2 from "../../assets/icons/angle-investing-2.png";
+import angelInvestingIcon3 from "../../assets/icons/angle-investing-3.png";
+import angelInvestingIcon4 from "../../assets/icons/angle-investing-4.png";
+
+import programOffering1 from "../../assets/icons/program-offering-1.png";
+import programOffering2 from "../../assets/icons/program-offering-2.png";
+import programOffering3 from "../../assets/icons/program-offering-3.png";
+import programOffering4 from "../../assets/icons/program-offering-4.png";
+
+import ecoPartner1 from "../../assets/images/partner-1.svg";
+import ecoPartner2 from "../../assets/images/partner-2.svg";
+import ecoPartner3 from "../../assets/images/partner-3.svg";
+import ecoPartner4 from "../../assets/images/partner-4.svg";
+import ecoPartner5 from "../../assets/images/partner-5.svg";
+import ecoPartner6 from "../../assets/images/partner-6.svg";
+
+
 import teamPerson1 from "../../assets/images/team-person-1.png";
 import teamPerson2 from "../../assets/images/team-person-2.png";
 import teamPerson3 from "../../assets/images/team-person-3.png";
@@ -34,18 +85,296 @@ import offeringIcon3 from "../../assets/icons/program-offering-3.png";
 import offeringIcon4 from "../../assets/icons/program-offering-4.png";
 
 import './home.scss';
+import { LinkedIn, WhatsApp } from '@mui/icons-material';
 
 export default function Home() {
   return (
     <main className='home-page'>
-      <section style={{ padding: '120px' }}>
-        Section1
+
+
+      <section className='top-section'>
+        <ul className='sticky-buttons'>
+          <li>
+            <a href='#'>
+              <img src={applyAsInvestorImg} />
+            </a>
+          </li>
+          <li>
+            <a href='#'>
+              <img src={applyAsStartupImg} />
+            </a>
+          </li>
+          <li className='for-web'>
+            <a href='#'>
+              <img src={watsappIcon} />
+            </a>
+          </li>
+          <li className='for-web'>
+            <a href='#'>
+              <img src={linkedinIcon} />
+            </a>
+          </li>
+        </ul>
+        <div className='container'>
+          <Grid container columnSpacing={20}>
+            <Grid item sm={12} md={9}>
+              <h2 className='color-secondary-light bold'>We are Indian Healthcare Angels (IHA)</h2>
+              <h1 className='color-white'>We bring <i>active deal</i> innovation to our healthcare ecosystem.</h1>
+              <div className='buttons-cover'>
+                <button className='btn secondary-light'>JOIN AS AN INDIVIDUAL INVESTOR</button>
+                <button className='btn primary-light'>JOIN AS A CORPORATE INVESTOR</button>
+                <button className='btn'>APPLY AS A STARTUP</button>
+                <button className='btn'>APPLY AS A MENTOR</button>
+              </div>
+            </Grid>
+          </Grid>
+          <div className='feature-card-list'>
+
+            <Grid container rowSpacing={8} columnSpacing={4}>
+              <Grid item xs={6} lg={3}>
+                <div className='feature-card'>
+                  <figure>
+                    <img src={featureIcon1} />
+                  </figure>
+                  <h2 className='mb-10 mt-30'>Huge CXO<br />Network</h2>
+                </div>
+              </Grid>
+              <Grid item xs={6} lg={3}>
+                <div className='feature-card'>
+                  <figure>
+                    <img src={featureIcon2} />
+                  </figure>
+                  <h2 className='mb-10 mt-30'>Extensive<br />deal flow</h2>
+                </div>
+              </Grid>
+              <Grid item xs={6} lg={3}>
+                <div className='feature-card'>
+                  <figure>
+                    <img src={featureIcon3} />
+                  </figure>
+                  <h2 className='mb-10 mt-30'>Exclusive<br />deal access</h2>
+                </div>
+              </Grid>
+              <Grid item xs={6} lg={3}>
+                <div className='feature-card'>
+                  <figure>
+                    <img src={featureIcon4} />
+                  </figure>
+                  <h2>50+ years of<br />experience</h2>
+                </div>
+              </Grid>
+            </Grid>
+          </div>
+        </div>
+      </section>
+
+      <section className='one-health'>
+        <div className='container'>
+
+          <h5 className='color-primary-light bold'>ONE HEALTH</h5>
+          <h1 className='sub-heading color-white left-gradient'>IHA is focused on One Health approach.<br />When you protect one, you protect<br />the other.</h1>
+          <button className='btn primary-light'>join as an investor</button>
+
+          <figure className='complete-one-health'>
+            <img src={oneHealthCycleDesk} />
+            <img src={oneHealthCycleMob} />
+          </figure>
+
+          <Grid className='biorx' container rowSpacing={10} columnSpacing={20}>
+            <Grid item xs={12} md={6}>
+              <figure className='map-image'>
+                <img src={mapImage} />
+              </figure>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <div className='biorx-content'>
+                <h2 className='sub-heading color-white'>IHA powered by BIORx</h2>
+                <h3 className='color-light mt-20'>Indian Healthcare Angels (IHA) is a brand owned by BIORx Venture Advisors Pvt. Ltd which provides a seamless private platform to all the angel investors to invest in
+                  early-stage ventures (Healthcare, Med-tech, Life Sciences, Pharma, Aggrotech, Biotech, Digital Health Start-ups
+                  and allied social sectors)</h3>
+              </div>
+            </Grid>
+          </Grid>
+
+
+        </div>
+      </section>
+
+      <section className='sub-sectors'>
+        <div className='container'>
+          <h5 className='color-primary-light bold'>IHA FOR INVESTORS</h5>
+          <h1 className='sub-heading color-primary left-gradient'>Here are the impact sub<br />sectors that we focus on</h1>
+          <button className='btn primary-light'>join as an investor</button>
+
+          <Grid container rowSpacing={10} columnSpacing={4}>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon1} />
+              <h3 className='color-primary mt-20'>Digital Healthcare</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon2} />
+              <h3 className='color-primary mt-20'>Pharmaceuticals</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon3} />
+              <h3 className='color-primary mt-20'>Biotechnology and<br />Bioengineering</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon4} />
+              <h3 className='color-primary mt-20'>Medical Devices and<br />Equipment</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon5} />
+              <h3 className='color-primary mt-20'>Clinical Research<br />Organizations</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon6} />
+              <h3 className='color-primary mt-20'>Mental Health and<br />Wellness</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon7} />
+              <h3 className='color-primary mt-20'>Medical supplies</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon8} />
+              <h3 className='color-primary mt-20'>Diagnostics and<br />Nutraceuticals</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon9} />
+              <h3 className='color-primary mt-20'>Agritech<br />and agriculture</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon10} />
+              <h3 className='color-primary mt-20'>Cleantech and<br />environment</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon11} />
+              <h3 className='color-primary mt-20'>Edtech</h3>
+            </Grid>
+            <Grid item xs={6} md={4} lg={3}>
+              <img src={sectorIcon12} />
+              <h3 className='color-primary mt-20'>And many<br />more</h3>
+            </Grid>
+          </Grid>
+        </div>
+      </section>
+
+      <section className='angel-investing'>
+        <div className='container'>
+          <h5 className='color-primary-light bold'>ANGEL INVESTING</h5>
+          <h1 className='sub-heading color-primary left-gradient'>Why IHA for<br />Angel Investing?</h1>
+          <button className='btn primary-light'>join as an investor</button>
+
+          <Grid container rowSpacing={10} columnSpacing={4}>
+            <Grid item xs={6} lg={3}>
+              <img src={angelInvestingIcon1} />
+              <h3 className='color-primary mt-20'>Chance to collaborate</h3>
+            </Grid>
+            <Grid item xs={6} lg={3}>
+              <img src={angelInvestingIcon2} />
+              <h3 className='color-primary mt-20'>Transparency</h3>
+            </Grid>
+            <Grid item xs={6} lg={3}>
+              <img src={angelInvestingIcon3} />
+              <h3 className='color-primary mt-20'>Domain expertise</h3>
+            </Grid>
+            <Grid item xs={6} lg={3}>
+              <img src={angelInvestingIcon4} />
+              <h3 className='color-primary mt-20'>Easy access<br />& Convenience</h3>
+            </Grid>
+          </Grid>
+
+          <div className='angel-investing-footer'>
+            <h2 className='main-heading color-primary'>
+              We are not only the best platform for angels out there but also the <i className='color-secondary-light regular'>best impact accelerator</i> for healthcare startups around the world.
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <section className='way-of-working'>
+        <div className='container'>
+          <h5 className='color-primary-light bold'>IHA FOR STARTUPS - OUR PROCESS</h5>
+          <h1 className='sub-heading color-white left-gradient'>Our way of working<br />with startups</h1>
+          <button className='btn primary-light'>apply as a startup</button>
+
+          <figure className='working-flow-img'>
+            <img src={workingFlowImgDesk} />
+            <img src={workingFlowImgMob} />
+          </figure>
+        </div>
+      </section>
+
+      <section className='ecosystem-partners'>
+        <div className='container'>
+          <h5 className='color-primary-light bold'>PARTNERS</h5>
+          <h1 className='sub-heading color-white left-gradient'>Our Ecosystem Partners</h1>
+          <button className='btn primary-light'>apply as a startup</button>
+
+          <div className='carousel'>
+            <Grid container rowSpacing={8} columnSpacing={4}>
+              <Grid item xs={6} sm={6} md={4}>
+                <div className='partner-cover'>
+                  <img src={ecoPartner1} />
+                </div>
+                <div className='partner-cover'>
+                  <img src={ecoPartner2} />
+                </div>
+              </Grid>
+              <Grid item xs={6} sm={6} md={4}>
+                <div className='partner-cover'>
+                  <img src={ecoPartner3} />
+                </div>
+                <div className='partner-cover'>
+                  <img src={ecoPartner4} />
+                </div>
+              </Grid>
+              <Grid item xs={6} sm={6} md={4}>
+                <div className='partner-cover'>
+                  <img src={ecoPartner5} />
+                </div>
+                <div className='partner-cover'>
+                  <img src={ecoPartner6} />
+                </div>
+              </Grid>
+            </Grid>
+          </div>
+        </div>
+      </section>
+
+      <section className='your-startup'>
+        <div className='container'>
+          <h5 className='color-primary-light bold'>IHA FOR STARTUPS</h5>
+          <h1 className='sub-heading color-white left-gradient'>Why IHA for your<br />startup?</h1>
+          <button className='btn primary-light'>apply as a startup</button>
+
+          <Grid container rowSpacing={10} columnSpacing={4}>
+            <Grid item xs={6} lg={3}>
+              <img src={programOffering1} />
+              <h3 className='color-white mt-20'>Proprietary Deal flow</h3>
+            </Grid>
+            <Grid item xs={6} lg={3}>
+              <img src={programOffering2} />
+              <h3 className='color-white mt-20'>50 years of experience</h3>
+            </Grid>
+            <Grid item xs={6} lg={3}>
+              <img src={programOffering3} />
+              <h3 className='color-white mt-20'>Mentor ecosystem</h3>
+            </Grid>
+            <Grid item xs={6} lg={3}>
+              <img src={programOffering4} />
+              <h3 className='color-white mt-20'>Experienced founders</h3>
+            </Grid>
+          </Grid>
+          <h4 className='color-light bold'>Interested in IHA Pitch events?</h4>
+          <button className='btn secondary-light'>Register here</button>
+        </div>
       </section>
 
       <section className='who-we-are'>
         <div className='container'>
           <h6 className='color-primary-light mb-20'>TEAM</h6>
-          <h1 className='color-primary'>Who we are?</h1>
+          <h1 className='sub-heading color-primary left-gradient'>Who we are?</h1>
           <ul className='top-positions'>
             <li>
               <figure>
@@ -97,7 +426,7 @@ export default function Home() {
             </li>
             <li>
               <figure>
-                <img src={teamPerson1} />
+                <img src={teamPerson3} />
               </figure>
               <div className='bio-data'>
                 <h2 className='color-primary mb-10 extra-bold'>Dr. Vishal Gandhi</h2>
@@ -118,7 +447,61 @@ export default function Home() {
             </li>
             <li>
               <figure>
-                <img src={teamPerson2} />
+                <img src={teamPerson4} />
+              </figure>
+              <div className='bio-data'>
+                <h2 className='color-primary mb-10 extra-bold'>Gaurav Sahay</h2>
+                <h4 className='color-primary-light regular-bold'>COO, Co-Founder</h4>
+                <h4 className='color-primary-light regular-bold'>MBA and B.Com, 10+ years of experience</h4>
+
+                <p>
+                  Gaurav is serving as Chief Operating Officer of Indian Healthcare Angels & BIORx Venture Advisors he leads the operations of the Company and heads strategic and financial advisory for portfolio startups in Healthcare & Edtech space, supporting startups in building sustainable and highly scalable business models. He has been
+                  a mentor to many startups in the last 2 years
+                </p>
+
+                <p>
+                  Gaurav comes from Dehradun and he is an alumnus of Delhi University & IE Business School Madrid.
+                </p>
+
+                <p>
+                  He started his career as a public sector banker about a decade ago. Leading multiple initiatives in Corporate Finance, Credit Underwriting and Financial Inclusion.
+                </p>
+
+                <button className='btn light-bg mb-30'>Read full bio</button>
+
+                <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
+              </div>
+            </li>
+            <li>
+              <figure>
+                <img src={teamPerson5} />
+              </figure>
+              <div className='bio-data'>
+                <h2 className='color-primary mb-10 extra-bold'>Gaurav Sahay</h2>
+                <h4 className='color-primary-light regular-bold'>COO, Co-Founder</h4>
+                <h4 className='color-primary-light regular-bold'>MBA and B.Com, 10+ years of experience</h4>
+
+                <p>
+                  Gaurav is serving as Chief Operating Officer of Indian Healthcare Angels & BIORx Venture Advisors he leads the operations of the Company and heads strategic and financial advisory for portfolio startups in Healthcare & Edtech space, supporting startups in building sustainable and highly scalable business models. He has been
+                  a mentor to many startups in the last 2 years
+                </p>
+
+                <p>
+                  Gaurav comes from Dehradun and he is an alumnus of Delhi University & IE Business School Madrid.
+                </p>
+
+                <p>
+                  He started his career as a public sector banker about a decade ago. Leading multiple initiatives in Corporate Finance, Credit Underwriting and Financial Inclusion.
+                </p>
+
+                <button className='btn light-bg mb-30'>Read full bio</button>
+
+                <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
+              </div>
+            </li>
+            <li>
+              <figure>
+                <img src={teamPerson6} />
               </figure>
               <div className='bio-data'>
                 <h2 className='color-primary mb-10 extra-bold'>Gaurav Sahay</h2>
@@ -146,63 +529,63 @@ export default function Home() {
           </ul>
 
           <div className='team-members'>
-            <h1 className='color-primary extra-bold'>
+            <h1 className='sub-heading color-primary left-gradient'>
               Members <br />
               and advisory board
             </h1>
             <img className='pattern-img' src={boardMemberPatternImg} />
 
             <Grid container rowSpacing={8} columnSpacing={4}>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg1} />
                 </figure>
                 <h3 className='color-primary bold mb-10'>Prashant Tandon</h3>
                 <h4 className='color-primary-light regular-bold'>COO</h4>
               </Grid>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg2} />
                 </figure>
                 <h3 className='color-primary bold mb-10'>Vidhu Goel</h3>
                 <h4 className='color-primary-light regular-bold'>CHRO</h4>
               </Grid>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg3} />
                 </figure>
                 <h3 className='color-primary bold mb-10'>Dr. Varun Gupta</h3>
                 <h4 className='color-primary-light regular-bold'>VP</h4>
               </Grid>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg4} />
                 </figure>
                 <h3 className='color-primary bold mb-10'>Dr. Purav Gandhi</h3>
                 <h4 className='color-primary-light regular-bold'>Investor Relations</h4>
               </Grid>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg5} />
                 </figure>
                 <h3 className='color-primary bold mb-10'>Prashant Tandon</h3>
                 <h4 className='color-primary-light regular-bold'>COO</h4>
               </Grid>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg6} />
                 </figure>
                 <h3 className='color-primary bold mb-10'>Vidhu Goel</h3>
                 <h4 className='color-primary-light regular-bold'>CHRO</h4>
               </Grid>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg7} />
                 </figure>
                 <h3 className='color-primary bold mb-10'>Dr. Varun Gupta</h3>
                 <h4 className='color-primary-light regular-bold'>VP</h4>
               </Grid>
-              <Grid item xs={6} sm={6} md={3}>
+              <Grid item xs={6} md={4} lg={3}>
                 <figure>
                   <img src={memberImg8} />
                 </figure>
@@ -220,10 +603,10 @@ export default function Home() {
         <div className='container'>
           <div className='mentorship-header'>
             <Grid container spacing={4}>
-              <Grid item xs={12} md={6}>
-                <h1>IHA Mentorship<br />Program</h1>
+              <Grid item sm={12} md={6}>
+                <h1 className='main-heading color-white'>IHA Mentorship<br />Program</h1>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item sm={12} md={6}>
                 <h2>To mentor healthcare startups<br />
                   and take them to the next level</h2>
               </Grid>
@@ -231,22 +614,22 @@ export default function Home() {
           </div>
           <div className='offering-body'>
             <h6 className='color-primary-light mb-20'>ANGEL INVESTING</h6>
-            <h1 className='color-white'>Program Offerings</h1>
+            <h1 className='main-heading color-white left-gradient'>Program Offerings</h1>
 
             <Grid container rowSpacing={10} columnSpacing={4}>
-              <Grid item xs={12} md={6}>
+              <Grid item md={6}>
                 <img src={offeringIcon1} />
                 <h3>Strategic CXO Network</h3>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item md={6}>
                 <img src={offeringIcon2} />
                 <h3>Grants and Growth Advisory</h3>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item md={6}>
                 <img src={offeringIcon3} />
                 <h3>Business Plan Validation</h3>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item md={6}>
                 <img src={offeringIcon4} />
                 <h3>Access to Funding and IP</h3>
               </Grid>
@@ -260,7 +643,7 @@ export default function Home() {
         <div className='container'>
           <div className='time-line-header center'>
             <h5 className='color-primary-light'>TIMELINE</h5>
-            <h1 className='color-white bold mt-20 mb-30'>Program offerings</h1>
+            <h1 className='main-heading color-white bold mt-20 mb-30'>Program offerings</h1>
             <button className='btn primary-light'>Apply for the first cohort</button>
           </div>
           <div className='timeline-content'>
@@ -314,10 +697,12 @@ export default function Home() {
 
       <section className='subscribe'>
         <div className='container'>
-          <h1 className='bold'>Subscribe Our<br />News Letter</h1>
+          <h1 className='main-heading color-white'>Subscribe Our<br />News Letter</h1>
           <div className='email-cover'>
             <input type="email" placeholder='Your email address' />
-            <img src={sentIcon} />
+            <button type="submit" className='on-load'>
+              <img src={sentIcon} />
+            </button>
           </div>
         </div>
       </section>
@@ -326,7 +711,7 @@ export default function Home() {
         <div className='container'>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
-              <h1>Get in Touch</h1>
+              <h1 className='main-heading color-white left-gradient'>Get in Touch</h1>
               <ul>
                 <li>
                   <figure>
@@ -358,7 +743,7 @@ export default function Home() {
               </ul>
             </Grid>
             <Grid item xs={12} md={6}>
-              <h1>Contact Us</h1>
+              <h1 className='main-heading color-white left-gradient'>Contact Us</h1>
               <form>
                 <div>
                   <label>Name</label>

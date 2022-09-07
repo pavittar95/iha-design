@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     box-sizing: border-box;
+    letter-spacing: -.02em;
 }
 ul,
 li {
@@ -13,6 +14,9 @@ img {
 body, textarea {
     font-family: 'Albert Sans', sans-serif !important;
     color: #120d26;
+}
+i{
+    font-family: 'IBM Plex Serif', serif !important;
 }
 a{
     text-decoration: none;
