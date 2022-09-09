@@ -1,5 +1,8 @@
 import Grid from '@mui/material/Grid';
 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 import sentIcon from "../../assets/icons/sent-icon.png";
 import phoneIcon from "../../assets/icons/phone-number.png";
 import emailIcon from "../../assets/icons/email.png";
@@ -88,6 +91,24 @@ import './home.scss';
 import { LinkedIn, WhatsApp } from '@mui/icons-material';
 
 export default function Home() {
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
   return (
     <main className='home-page'>
 
@@ -168,11 +189,13 @@ export default function Home() {
         </div>
       </section>
 
+
+
       <section className='one-health'>
         <div className='container'>
 
           <h5 className='color-primary-light bold'>ONE HEALTH</h5>
-          <h1 className='sub-heading color-white left-gradient'>IHA is focused on One Health approach.<br />When you protect one, you protect<br />the other.</h1>
+          <h1 className='sub-heading color-white left-gradient'>IHA is focused on One Health approach.<br /><br />When you protect one, you protect <br />the other.</h1>
           <button className='btn primary-light'>join as an investor</button>
 
           <figure className='complete-one-health'>
@@ -204,9 +227,9 @@ export default function Home() {
         <div className='container'>
           <h5 className='color-primary-light bold'>IHA FOR INVESTORS</h5>
           <h1 className='sub-heading color-primary left-gradient'>Here are the impact sub<br />sectors that we focus on</h1>
-          <button className='btn primary-light'>join as an investor</button>
+          <button className='btn primary-light w-100-mob'>join as an investor</button>
 
-          <Grid container rowSpacing={10} columnSpacing={4}>
+          <Grid container rowSpacing={{xs:5, md:7}} columnSpacing={4}>
             <Grid item xs={6} md={4} lg={3}>
               <img src={sectorIcon1} />
               <h3 className='color-primary mt-20'>Digital Healthcare</h3>
@@ -262,10 +285,10 @@ export default function Home() {
       <section className='angel-investing'>
         <div className='container'>
           <h5 className='color-primary-light bold'>ANGEL INVESTING</h5>
-          <h1 className='sub-heading color-primary left-gradient'>Why IHA for<br />Angel Investing?</h1>
-          <button className='btn primary-light'>join as an investor</button>
+          <h1 className='sub-heading color-primary left-gradient'>Why IHA for <br />Angel Investing?</h1>
+          <button className='btn primary-light w-100-mob'>join as an investor</button>
 
-          <Grid container rowSpacing={10} columnSpacing={4}>
+          <Grid container rowSpacing={{xs:5, md:7}} columnSpacing={4}>
             <Grid item xs={6} lg={3}>
               <img src={angelInvestingIcon1} />
               <h3 className='color-primary mt-20'>Chance to collaborate</h3>
@@ -296,7 +319,7 @@ export default function Home() {
         <div className='container'>
           <h5 className='color-primary-light bold'>IHA FOR STARTUPS - OUR PROCESS</h5>
           <h1 className='sub-heading color-white left-gradient'>Our way of working<br />with startups</h1>
-          <button className='btn primary-light'>apply as a startup</button>
+          <button className='btn primary-light w-100-mob'>apply as a startup</button>
 
           <figure className='working-flow-img'>
             <img src={workingFlowImgDesk} />
@@ -309,36 +332,42 @@ export default function Home() {
         <div className='container'>
           <h5 className='color-primary-light bold'>PARTNERS</h5>
           <h1 className='sub-heading color-white left-gradient'>Our Ecosystem Partners</h1>
-          <button className='btn primary-light'>apply as a startup</button>
+          <button className='btn primary-light w-100-mob'>apply as a startup</button>
 
-          <div className='carousel'>
-            <Grid container rowSpacing={8} columnSpacing={4}>
-              <Grid item xs={6} sm={6} md={4}>
-                <div className='partner-cover'>
-                  <img src={ecoPartner1} />
-                </div>
-                <div className='partner-cover'>
-                  <img src={ecoPartner2} />
-                </div>
-              </Grid>
-              <Grid item xs={6} sm={6} md={4}>
-                <div className='partner-cover'>
-                  <img src={ecoPartner3} />
-                </div>
-                <div className='partner-cover'>
-                  <img src={ecoPartner4} />
-                </div>
-              </Grid>
-              <Grid item xs={6} sm={6} md={4}>
-                <div className='partner-cover'>
-                  <img src={ecoPartner5} />
-                </div>
-                <div className='partner-cover'>
-                  <img src={ecoPartner6} />
-                </div>
-              </Grid>
-            </Grid>
-          </div>
+          <Carousel responsive={responsive} containerClass="cards-carousel">
+            <div className='two-partners'>
+              <div className='partner-cover'>
+                <img src={ecoPartner1} />
+              </div>
+              <div className='partner-cover'>
+                <img src={ecoPartner2} />
+              </div>
+            </div>
+            <div className='two-partners'>
+              <div className='partner-cover'>
+                <img src={ecoPartner3} />
+              </div>
+              <div className='partner-cover'>
+                <img src={ecoPartner4} />
+              </div>
+            </div>
+            <div className='two-partners'>
+              <div className='partner-cover'>
+                <img src={ecoPartner5} />
+              </div>
+              <div className='partner-cover'>
+                <img src={ecoPartner6} />
+              </div>
+            </div>
+            <div className='two-partners'>
+              <div className='partner-cover'>
+                <img src={ecoPartner5} />
+              </div>
+              <div className='partner-cover'>
+                <img src={ecoPartner6} />
+              </div>
+            </div>
+          </Carousel>
         </div>
       </section>
 
@@ -346,7 +375,7 @@ export default function Home() {
         <div className='container'>
           <h5 className='color-primary-light bold'>IHA FOR STARTUPS</h5>
           <h1 className='sub-heading color-white left-gradient'>Why IHA for your<br />startup?</h1>
-          <button className='btn primary-light'>apply as a startup</button>
+          <button className='btn primary-light w-100-mob'>apply as a startup</button>
 
           <Grid container rowSpacing={10} columnSpacing={4}>
             <Grid item xs={6} lg={3}>
@@ -367,7 +396,7 @@ export default function Home() {
             </Grid>
           </Grid>
           <h4 className='color-light bold'>Interested in IHA Pitch events?</h4>
-          <button className='btn secondary-light'>Register here</button>
+          <button className='btn secondary-light w-100-mob'>Register here</button>
         </div>
       </section>
 
@@ -392,7 +421,7 @@ export default function Home() {
                   Accelerator for all key stakeholders in the startup ecosystem to tap opportunities in allied sectors
                   (Ed-Tech & Agri-Tech etc.)</p>
 
-                <button className='btn light-bg mb-30'>Read full bio</button>
+                <button className='btn light-bg mb-30 w-100-mob'>Read full bio</button>
 
                 <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
               </div>
@@ -419,8 +448,6 @@ export default function Home() {
                   He started his career as a public sector banker about a decade ago. Leading multiple initiatives in Corporate Finance, Credit Underwriting and Financial Inclusion.
                 </p>
 
-                <button className='btn light-bg mb-30'>Read full bio</button>
-
                 <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
               </div>
             </li>
@@ -429,19 +456,13 @@ export default function Home() {
                 <img src={teamPerson3} />
               </figure>
               <div className='bio-data'>
-                <h2 className='color-primary mb-10 extra-bold'>Dr. Vishal Gandhi</h2>
-                <h4 className='color-primary-light regular-bold'>Founder & CEO</h4>
-                <h4 className='color-primary-light regular-bold'>PhD, MBA and MS, 23+ years of experience</h4>
+                <h2 className='color-primary mb-10 extra-bold'>Hryshikesh Dihingia</h2>
+                <h4 className='color-primary-light regular-bold'>Vice President</h4>
+                <h4 className='color-primary-light regular-bold'>MBA and B.Com, 9+ years of experience</h4>
 
-                <p>Dr. Vishal Gandhi is the Founder & CEO at BIORx Venture Advisors Pvt. Ltd
-                  (A Decade of Institutional Excellence) and Indian Healthcare Angels, an Angel Network
-                  providing a seamless private platform to all the angel investors to invest in early-stage ventures.
-                  His active projects include i3ex (a vertical of BIORx), which is an Impact focused Virtual Business
-                  Accelerator for all key stakeholders in the startup ecosystem to tap opportunities in allied sectors
-                  (Ed-Tech & Agri-Tech etc.)</p>
-
-                <button className='btn light-bg mb-30'>Read full bio</button>
-
+                <p>Hryshikesh is the head of Strategy & Business Development at Indian Healthcare Angels (IHA), he has a rich corporate experience of about 8 years with S&P Global Market Intelligence. During his professional tenure with S&P, he has effectively led and managed several cross functional projects and stakeholders including Clients, Vendors, internal research, technology and product teams. Hryshi was also an active member of the Community Impact drive of the company comprising of activities including teaching & managing school activities for destitute children, tree plantation drives, book & clothes distribution to orphanages and old age homes. He has always been passionate about sports and has led the University and Office Cricket teams. Hryshi loves to travel, explore new places & cultures and is a big time foodaholic.</p>
+                <p>Hryshikesh hails from Naharkatia, Assam. He pursued his Bachelor of
+                  Commerce (Hons.) from Delhi University and his MBA in Finance from the NIIT University. </p>
                 <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
               </div>
             </li>
@@ -450,25 +471,12 @@ export default function Home() {
                 <img src={teamPerson4} />
               </figure>
               <div className='bio-data'>
-                <h2 className='color-primary mb-10 extra-bold'>Gaurav Sahay</h2>
-                <h4 className='color-primary-light regular-bold'>COO, Co-Founder</h4>
-                <h4 className='color-primary-light regular-bold'>MBA and B.Com, 10+ years of experience</h4>
+                <h2 className='color-primary mb-10 extra-bold'>Pritika Kalra</h2>
+                <h4 className='color-primary-light regular-bold'>Director Communication & PR </h4>
+                <h4 className='color-primary-light regular-bold'>MA & PG Diploma in Journalism, 20+ years of experience</h4>
 
-                <p>
-                  Gaurav is serving as Chief Operating Officer of Indian Healthcare Angels & BIORx Venture Advisors he leads the operations of the Company and heads strategic and financial advisory for portfolio startups in Healthcare & Edtech space, supporting startups in building sustainable and highly scalable business models. He has been
-                  a mentor to many startups in the last 2 years
-                </p>
-
-                <p>
-                  Gaurav comes from Dehradun and he is an alumnus of Delhi University & IE Business School Madrid.
-                </p>
-
-                <p>
-                  He started his career as a public sector banker about a decade ago. Leading multiple initiatives in Corporate Finance, Credit Underwriting and Financial Inclusion.
-                </p>
-
-                <button className='btn light-bg mb-30'>Read full bio</button>
-
+                <p>After completing Master’s in Arts from the Hindu College, University of Delhi, Pritika went on to complete a communications diploma from Bharatiya Vidya Bhavan, New Delhi. She has a long association with BIORx & Indian Healthcare Angels as one of its Founding Members. Prior to that she worked for over a decade in Media, Marketing Communication and Human Capital Management in The Energy and Resources Institute [TERI], New Delhi as well as at the India Infrastructure Publishing, New Delhi.
+                  Pritika does not restrict her work to Print or Digital Media. She converges multiple modes of communication to create a connection with people—such as even using Music and Indian Dance!  </p>
                 <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
               </div>
             </li>
@@ -477,25 +485,14 @@ export default function Home() {
                 <img src={teamPerson5} />
               </figure>
               <div className='bio-data'>
-                <h2 className='color-primary mb-10 extra-bold'>Gaurav Sahay</h2>
-                <h4 className='color-primary-light regular-bold'>COO, Co-Founder</h4>
-                <h4 className='color-primary-light regular-bold'>MBA and B.Com, 10+ years of experience</h4>
+                <h2 className='color-primary mb-10 extra-bold'>Sreeram Sridhar</h2>
+                <h4 className='color-primary-light regular-bold'>Senior manager</h4>
+                <h4 className='color-primary-light regular-bold'>BBA, 2+ years of Experience</h4>
 
-                <p>
-                  Gaurav is serving as Chief Operating Officer of Indian Healthcare Angels & BIORx Venture Advisors he leads the operations of the Company and heads strategic and financial advisory for portfolio startups in Healthcare & Edtech space, supporting startups in building sustainable and highly scalable business models. He has been
-                  a mentor to many startups in the last 2 years
+                <p>Sreeram takes is a Senior Manager and he takes care of Transaction Advisory and Investor Relationships at Indian Healthcare Angels (IHA),
+                  Sreeram started his career in the Fintech space with Paytm where he was working in the FASTag category and has seen and experienced the initial phase of FASTag implementation. He helped the team in Offline Operations with support in Customer Acquisition Cost (CAC) tracking across the offline channels and support the management in keeping the CAC within a certain threshold, plan study of work problems and procedures such as cost analysis, organizational change, communications, and information flow for the offline Agent network, pay out calculations for agents based on different pay structures according to market condition and compliance adherence for our offline Agent network.
+                  Sreeram hails from Chennai, Tamil Nadu. He pursued his Bachelor of Business Administration (BBA) from Symbiosis International (Deemed to be University).
                 </p>
-
-                <p>
-                  Gaurav comes from Dehradun and he is an alumnus of Delhi University & IE Business School Madrid.
-                </p>
-
-                <p>
-                  He started his career as a public sector banker about a decade ago. Leading multiple initiatives in Corporate Finance, Credit Underwriting and Financial Inclusion.
-                </p>
-
-                <button className='btn light-bg mb-30'>Read full bio</button>
-
                 <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
               </div>
             </li>
@@ -504,25 +501,11 @@ export default function Home() {
                 <img src={teamPerson6} />
               </figure>
               <div className='bio-data'>
-                <h2 className='color-primary mb-10 extra-bold'>Gaurav Sahay</h2>
-                <h4 className='color-primary-light regular-bold'>COO, Co-Founder</h4>
-                <h4 className='color-primary-light regular-bold'>MBA and B.Com, 10+ years of experience</h4>
+                <h2 className='color-primary mb-10 extra-bold'>Ranita Kalaskar</h2>
+                <h4 className='color-primary-light regular-bold'>Assistant Manager</h4>
+                <h4 className='color-primary-light regular-bold'>BA LLB, 6+ Months of experience</h4>
 
-                <p>
-                  Gaurav is serving as Chief Operating Officer of Indian Healthcare Angels & BIORx Venture Advisors he leads the operations of the Company and heads strategic and financial advisory for portfolio startups in Healthcare & Edtech space, supporting startups in building sustainable and highly scalable business models. He has been
-                  a mentor to many startups in the last 2 years
-                </p>
-
-                <p>
-                  Gaurav comes from Dehradun and he is an alumnus of Delhi University & IE Business School Madrid.
-                </p>
-
-                <p>
-                  He started his career as a public sector banker about a decade ago. Leading multiple initiatives in Corporate Finance, Credit Underwriting and Financial Inclusion.
-                </p>
-
-                <button className='btn light-bg mb-30'>Read full bio</button>
-
+                <p>Ranita Kalaskar is the Assistant Manager Legal at Indian Healthcare Angels, a law graduate from Amity Law School Delhi having interests in Corporate Law and building her career on the lines of Investment Banking taking care of legal aspects and compliances. She has been with IHA for the past 7 months. She has worked with a Delhi based e-commerce company prior to IHA in their legal and  growth department. She is fond of reading books, dancing, and painting adding the affable element of creativity to the team.</p>
                 <a href='#' className='pointer'><img src={circularLinkedinIcon} /></a>
               </div>
             </li>
@@ -594,7 +577,7 @@ export default function Home() {
               </Grid>
             </Grid>
 
-            <button className='btn primary-light mt-30'>Apply as a mentor</button>
+            <button className='btn primary-light mt-30 w-100-mob'>Apply as a mentor</button>
           </div>
         </div>
       </section>
@@ -616,20 +599,20 @@ export default function Home() {
             <h6 className='color-primary-light mb-20'>ANGEL INVESTING</h6>
             <h1 className='main-heading color-white left-gradient'>Program Offerings</h1>
 
-            <Grid container rowSpacing={10} columnSpacing={4}>
-              <Grid item md={6}>
+            <Grid container rowSpacing={{xs:5, md:7}} columnSpacing={4}>
+              <Grid item xs={6} md={6}>
                 <img src={offeringIcon1} />
                 <h3>Strategic CXO Network</h3>
               </Grid>
-              <Grid item md={6}>
+              <Grid item xs={6} md={6}>
                 <img src={offeringIcon2} />
                 <h3>Grants and Growth Advisory</h3>
               </Grid>
-              <Grid item md={6}>
+              <Grid item xs={6} md={6}>
                 <img src={offeringIcon3} />
                 <h3>Business Plan Validation</h3>
               </Grid>
-              <Grid item md={6}>
+              <Grid item xs={6} md={6}>
                 <img src={offeringIcon4} />
                 <h3>Access to Funding and IP</h3>
               </Grid>
@@ -644,7 +627,7 @@ export default function Home() {
           <div className='time-line-header center'>
             <h5 className='color-primary-light'>TIMELINE</h5>
             <h1 className='main-heading color-white bold mt-20 mb-30'>Program offerings</h1>
-            <button className='btn primary-light'>Apply for the first cohort</button>
+            <button className='btn primary-light w-100-mob'>Apply for the first cohort</button>
           </div>
           <div className='timeline-content'>
             <ul>
@@ -697,7 +680,7 @@ export default function Home() {
 
       <section className='subscribe'>
         <div className='container'>
-          <h1 className='main-heading color-white'>Subscribe Our<br />News Letter</h1>
+          <h1 className='color-white'>Subscribe Our<br />News Letter</h1>
           <div className='email-cover'>
             <input type="email" placeholder='Your email address' />
             <button type="submit" className='on-load'>
@@ -708,7 +691,7 @@ export default function Home() {
       </section>
 
       <section className="contact-us">
-        <div className='container'>
+        <div className='container'> 
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
               <h1 className='main-heading color-white left-gradient'>Get in Touch</h1>

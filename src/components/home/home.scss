@@ -1,7 +1,7 @@
-.left-gradient{
+.left-gradient {
     position: relative;
     padding-left: 45px;
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
         padding-left: 32px;
     }
     &::before {
@@ -14,21 +14,21 @@
         background-image: linear-gradient(#36c994, #22a7f6);
     }
 }
-.main-heading{
+.main-heading {
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.1;
-    letter-spacing: -.04em;
-    @media screen and (max-width: 992px){
+    letter-spacing: -0.04em;
+    @media screen and (max-width: 992px) {
         font-size: 40px;
     }
 }
-.sub-heading{
+.sub-heading {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.33;
-    letter-spacing: -.04em;
-    @media screen and (max-width: 992px){
+    letter-spacing: -0.04em;
+    @media screen and (max-width: 992px) {
         font-size: 40px;
     }
 }
@@ -43,11 +43,11 @@
     justify-content: center;
     flex-direction: column;
     width: fit-content;
-    z-index: 9999;
+    z-index: 99;
     .for-web {
         margin: 25px 0px 0px;
     }
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
         display: none;
     }
 }
@@ -57,13 +57,14 @@
     background-position-y: top;
     background-position-x: 90%;
     background-size: inherit;
-    padding: 270px 0px 150px;
+    padding: 250px 0px 150px;
     max-width: 1550px;
     margin: auto;
     h1 {
         font-size: 80px;
-        font-weight: 800;
-        margin: 25px 0px 40px;
+        font-weight: 700;
+        margin: 15px 0px 40px;
+        line-height: 1;
     }
     .buttons-cover {
         display: flex;
@@ -76,7 +77,7 @@
             width: 375px;
         }
     }
-    .feature-card-list{
+    .feature-card-list {
         padding: 80px 0px;
     }
     .feature-card {
@@ -114,12 +115,12 @@
     // background-position-y: -30vw;
     // background-size: 100%;
     h1 {
-        position: relative;
-        font-size: 48px;
-        color: var(--white);
-        font-weight: bold;
-        padding-left: 45px;
         margin: 25px 0px 40px;
+        br {
+            &:nth-child(2) {
+                display: none;
+            }
+        }
     }
     .complete-one-health {
         margin: 80px auto 70px;
@@ -153,10 +154,6 @@
             justify-content: center;
             flex-direction: column;
             height: 100%;
-            h2 {
-                font-size: 46px;
-                font-weight: 800;
-            }
             h3 {
                 line-height: 1.9;
                 font-weight: 600;
@@ -201,7 +198,7 @@
             margin-bottom: 70px;
         }
         .angel-investing-footer {
-            margin-top: 120px;
+            margin-top: 140px;
             h2 {
                 position: relative;
                 font-size: 46px;
@@ -236,13 +233,13 @@
         img {
             width: 100%;
             &:first-child {
-                @media screen and (max-width: 576px) {
+                @media screen and (max-width: 767px) {
                     display: none;
                 }
             }
             &:last-child {
                 display: none;
-                @media screen and (max-width: 576px) {
+                @media screen and (max-width: 767px) {
                     display: block;
                 }
             }
@@ -250,7 +247,7 @@
     }
 }
 .ecosystem-partners {
-    padding: 100px 0px;
+    padding: 100px 0px 60px;
     background-image: url("../../assets/images/way-of-working-top-bg.png");
     background-repeat: no-repeat;
     background-position-x: -10vw;
@@ -259,9 +256,16 @@
     h1 {
         margin: 25px 0px 40px;
     }
-    .carousel {
-        margin: 100px -40px;
-        width: 100%;
+    .cards-carousel {
+        margin: 130px -20px 0px;
+        width: calc(100% + 20px);
+        padding-bottom: 110px;
+        .two-partners {
+            margin: 0px 20px;
+        }
+        .react-multi-carousel-item {
+            min-width: 320px;
+        }
         .partner-cover {
             width: 100%;
             background-color: var(--white);
@@ -270,14 +274,42 @@
             align-items: center;
             justify-content: center;
             padding: 10px;
-            margin: 40px;
             height: 156px;
+            &:first-child {
+                margin-bottom: 40px;
+            }
             img {
                 width: auto;
                 height: auto;
                 max-width: 100%;
                 max-height: 100%;
                 object-fit: cover;
+            }
+        }
+        .react-multiple-carousel__arrow {
+            left: auto;
+            bottom: 0px;
+            background: var(--white);
+            z-index: 99;
+            width: 56px;
+            height: 56px;
+            &::before {
+                color: var(--primary-light);
+                font-size: 10px;
+            }
+            &.react-multiple-carousel__arrow--left {
+                right: 70px;
+                @media screen and (max-width: 767px) {
+                    right: auto;
+                    left: 20px;
+                }
+            }
+            &.react-multiple-carousel__arrow--right {
+                right: 0px;
+                @media screen and (max-width: 767px) {
+                    right: auto;
+                    left: 90px;
+                }
             }
         }
     }
@@ -354,9 +386,6 @@
         padding: 80px;
         overflow: hidden;
         margin: 60px -30px 0px;
-        h1 {
-            font-size: 48px;
-        }
         .pattern-img {
             position: absolute;
             top: 0px;
@@ -397,11 +426,6 @@
     .mentorship-header {
         padding-bottom: 80px;
         border-bottom: 1px dashed var(--primary-light);
-        h1 {
-            color: var(--white);
-            font-weight: 700;
-            font-size: 56px;
-        }
         h2 {
             color: #9caabb;
             font-size: 32px;
@@ -415,20 +439,16 @@
         }
         h3 {
             font-size: 20px;
-            font-size: 700;
+            font-weight: 700;
             color: var(--white);
             margin-top: 30px;
         }
     }
 }
 .timeline {
-    .time-line-header {
-        h1 {
-            font-size: 56px;
-        }
-    }
     .timeline-content {
         width: 500px;
+        max-width: 100%;
         margin: auto;
         ul {
             position: relative;
@@ -502,6 +522,7 @@
         border-radius: 48px;
         background-image: url("../../assets/images/subscribe-bg.png");
         background-repeat: no-repeat;
+        background-position: top right;
         background-size: cover;
         display: flex;
         align-items: center;
@@ -514,7 +535,7 @@
         h1 {
             font-size: 50px;
             color: white;
-            font-weight: bold;
+            font-weight: 800;
             margin: 30px 0px;
         }
         .email-cover {
@@ -530,7 +551,7 @@
                 border: none;
                 width: 400px;
             }
-            button{
+            button {
                 position: absolute;
                 right: 10px;
                 top: 10px;
@@ -604,7 +625,143 @@
     }
 }
 @media screen and (max-width: 767px) {
+    .top-section {
+        padding-bottom: 0px;
+        padding-top: 150px;
+        background-size: contain;
+        h2 {
+            &.color-secondary-light {
+                font-size: 20px;
+            }
+        }
+        h1 {
+            font-size: 64px;
+            line-height: 0.9;
+        }
+        .buttons-cover {
+            .btn{
+                width: 100%;
+            }
+        }
+        .feature-card-list {
+            padding: 80px 0px 40px;
+            .feature-card {
+                h2 {
+                    font-size: 20px;
+                    margin: 24px 0px 0px;
+                }
+            }
+        }
+    }
+    .one-health {
+        padding: 20px 24px 80px;
+        .container {
+            max-width: 100%;
+        }
+        h1 {
+            br {
+                &:last-child {
+                    display: none;
+                }
+                &:nth-child(2) {
+                    display: block;
+                }
+            }
+        }
+    }
+    .sub-sectors {
+        .container {
+            border-radius: 0px;
+            background: var(--white);
+            max-width: 100%;
+            padding: 48px 24px;
+            margin-top: 0px;
+            h1 {
+                br {
+                    display: none;
+                }
+            }
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+    .angel-investing {
+        .container {
+            border-radius: 0px;
+            background: var(--white);
+            max-width: 100%;
+            padding: 48px 24px;
+            margin-top: 55px;
+            h1 {
+                br {
+                    display: none;
+                }
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .angel-investing-footer {
+                margin-top: 180px;
+                h2 {
+                    padding-left: 0px;
+                    font-size: 40px;
+                    &::before {
+                        background-image: url("./../../assets/icons/top-right-angle.png");
+                        top: -65px;
+                        background-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .your-startup {
+        padding-top: 20px;
+        padding-bottom: 84px;
+    }
+    .who-we-are {
+        padding: 48px 0px 0px;
+        border-radius: 0px;
+        h1 {
+            margin-bottom: 24px;
+        }
+        .team-members {
+            padding: 48px 24px 80px;
+            border-radius: 0px;
+            margin: 50px -20px 0px;
+            .pattern-img {
+                display: none;
+            }
+            figure {
+                @media screen and (max-width: 576px) {
+                    height: 190px;
+                }
+            }
+        }
+    }
+    .mentorship-program {
+        padding: 56px 24px;
+        .container {
+            max-width: 100%;
+        }
+        .mentorship-header {
+            padding-bottom: 72px;
+            h2 {
+                font-size: 24px;
+            }
+        }
+        .offering-body {
+            padding-top: 80px;
+            h3 {
+                margin-top: 24px;
+            }
+        }
+    }
     .timeline {
+        padding: 48px 24px 0px;
+        .container {
+            max-width: 100%;
+        }
         .timeline-content {
             ul {
                 padding: 70px 0px;
@@ -631,6 +788,35 @@
                         margin-top: 20px;
                     }
                 }
+            }
+        }
+    }
+    .subscribe {
+        .container {
+            border-radius: 32px;
+            padding: 48px 24px 40px;
+            h1 {
+                font-size: 48px;
+                margin-top: 0px;
+                @media screen and (max-width: 420px) {
+                    font-size: 40px;
+                }
+            }
+            .email-cover {
+                max-width: 100%;
+                margin-bottom: 0px;
+                input {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+    .contact-us {
+        padding: 90px 24px;
+        .container {
+            max-width: 100%;
+            form {
+                width: 100%;
             }
         }
     }

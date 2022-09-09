@@ -13,7 +13,7 @@ export default function Footer() {
           IHA looks forward to making healthcare startups' journeys
           more impactful and value creative for all the stakeholders.
         </h2>
-        <Grid container spacing={4}>
+        <Grid container rowSpacing={{xs:4, md:6}} columnSpacing={4}>
           <Grid item xs={6} md={3}>
             <h3>Thesis</h3>
             <ul>

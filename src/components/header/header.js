@@ -1,4 +1,5 @@
-import * as React from 'react';
+// import * as React from 'react';
+import React, { useState } from "react";
 
 import logoImg from "../../assets/images/logo.svg";
 import watsappIcon from "../../assets/icons/watsapp-logo.svg";
@@ -9,6 +10,12 @@ import minusIcon from "../../assets/icons/minus.svg";
 import './header.scss';
 
 export default function Header() {
+  const [isMenuOpen, setActive] = useState(false);
+
+  const openMenu = () => {
+    setActive(!isMenuOpen);
+    document.body.classList.toggle('overflow-hidden');
+  };
 
   return (
       <header>
@@ -23,18 +30,18 @@ export default function Header() {
             <a className='for-mob'>
               <img src={linkedinIcon} />
             </a>
-            <div className='open-menu justify-end'>
+            <div className='open-menu justify-end' onClick={openMenu}>
               <h4 className='mr-10'>MENU</h4>
               <img src={plusIcon} />
             </div>
 
-            <div className='menu-cover'>
+            <div className={isMenuOpen ? 'menu-cover active' : 'menu-cover'}>
               <div className='container'>
                 <header>
                   <figure className='logo-cover'>
                     <img src={logoImg} />
                   </figure>
-                  <div className='open-menu justify-end'>
+                  <div className='open-menu justify-end' onClick={openMenu}>
                     <h4 className='mr-10'>CLOSE</h4>
                     <img src={minusIcon} />
                   </div>

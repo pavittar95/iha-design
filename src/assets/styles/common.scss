@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 1200px;
     margin: auto;
     max-width: calc(100% - 40px);
@@ -117,7 +117,7 @@
 .pointer {
     cursor: pointer;
 }
-.italic{
+.italic {
     font-style: italic;
 }
 
@@ -236,4 +236,7 @@
 
 .mr-30 {
     margin-right: 30px;
+}
+.overflow-hidden {
+    overflow: hidden;
 }

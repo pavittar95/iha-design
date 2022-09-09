@@ -38,3 +38,14 @@ footer{
         color: $lightColor;
     }
 }
+
+@media screen and (max-width: 767px) {
+    footer {
+        ul{
+            margin: 0px;
+        }
+        h4{
+            margin-top: 56px;
+        }
+    }
+}
