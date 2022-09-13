@@ -15,6 +15,7 @@ export default function Header() {
   const openMenu = () => {
     setActive(!isMenuOpen);
     document.body.classList.toggle('overflow-hidden');
+    document.getElementById("sticky-buttons").classList.toggle('d-none');
   };
 
   return (
@@ -25,10 +26,10 @@ export default function Header() {
           </figure>
           <div className="justify-end">
             <a className='for-mob'>
-              <img src={watsappIcon} />
+              <img src={linkedinIcon} />
             </a>
             <a className='for-mob'>
-              <img src={linkedinIcon} />
+              <img src={watsappIcon} />
             </a>
             <div className='open-menu justify-end' onClick={openMenu}>
               <h4 className='mr-10'>MENU</h4>

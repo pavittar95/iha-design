@@ -15,6 +15,8 @@ import applyAsStartupImg from "../../assets/images/apply-as-startup.svg";
 import watsappIcon from "../../assets/icons/watsapp-logo.svg";
 import linkedinIcon from "../../assets/icons/linkedin-logo.svg";
 
+import scrollImg from "../../assets/images/scroll-to-explore.png";
+
 import featureIcon1 from "../../assets/icons/feature-1.png";
 import featureIcon2 from "../../assets/icons/feature-2.png";
 import featureIcon3 from "../../assets/icons/feature-3.png";
@@ -114,7 +116,7 @@ export default function Home() {
 
 
       <section className='top-section'>
-        <ul className='sticky-buttons'>
+        <ul className='sticky-buttons' id="sticky-buttons">
           <li>
             <a href='#'>
               <img src={applyAsInvestorImg} />
@@ -149,6 +151,9 @@ export default function Home() {
               </div>
             </Grid>
           </Grid>
+          <div className='scroll-to-explore'>
+            <img src={scrollImg} />
+          </div>
           <div className='feature-card-list'>
 
             <Grid container rowSpacing={8} columnSpacing={4}>
@@ -229,7 +234,7 @@ export default function Home() {
           <h1 className='sub-heading color-primary left-gradient'>Here are the impact sub<br />sectors that we focus on</h1>
           <button className='btn primary-light w-100-mob'>join as an investor</button>
 
-          <Grid container rowSpacing={{xs:5, md:7}} columnSpacing={4}>
+          <Grid container rowSpacing={{ xs: 5, md: 7 }} columnSpacing={4}>
             <Grid item xs={6} md={4} lg={3}>
               <img src={sectorIcon1} />
               <h3 className='color-primary mt-20'>Digital Healthcare</h3>
@@ -288,7 +293,7 @@ export default function Home() {
           <h1 className='sub-heading color-primary left-gradient'>Why IHA for <br />Angel Investing?</h1>
           <button className='btn primary-light w-100-mob'>join as an investor</button>
 
-          <Grid container rowSpacing={{xs:5, md:7}} columnSpacing={4}>
+          <Grid container rowSpacing={{ xs: 5, md: 7 }} columnSpacing={4}>
             <Grid item xs={6} lg={3}>
               <img src={angelInvestingIcon1} />
               <h3 className='color-primary mt-20'>Chance to collaborate</h3>
@@ -599,7 +604,7 @@ export default function Home() {
             <h6 className='color-primary-light mb-20'>ANGEL INVESTING</h6>
             <h1 className='main-heading color-white left-gradient'>Program Offerings</h1>
 
-            <Grid container rowSpacing={{xs:5, md:7}} columnSpacing={4}>
+            <Grid container rowSpacing={{ xs: 5, md: 7 }} columnSpacing={4}>
               <Grid item xs={6} md={6}>
                 <img src={offeringIcon1} />
                 <h3>Strategic CXO Network</h3>
@@ -691,7 +696,7 @@ export default function Home() {
       </section>
 
       <section className="contact-us">
-        <div className='container'> 
+        <div className='container'>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
               <h1 className='main-heading color-white left-gradient'>Get in Touch</h1>
@@ -749,3 +754,5 @@ export default function Home() {
     </main>
   )
 }
+
+

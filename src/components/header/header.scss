@@ -15,6 +15,9 @@ header {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @media screen and (max-width: 767px) {
+            align-items: center;
+        }
     }
     .logo-cover {
         width: 233px;
@@ -29,10 +32,31 @@ header {
     .for-mob {
         margin-right: 15px;
         display: none;
+        &:nth-child(2){
+            margin-right: 25px;
+        }
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
+        @media screen and (max-width: 767px) {
+            img{
+                width: 23px;
+            }
+            &:first-child{
+                img{
+                    width: 19px;
+                }
+            }
+        }
     }
     .open-menu {
         letter-spacing: 2px;
         cursor: pointer;
+    }
+    @media screen and (max-width: 767px) {
+        h4{
+            display: none;
+        }
     }
     .menu-cover {
         display: none;

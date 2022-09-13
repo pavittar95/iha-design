@@ -43,7 +43,10 @@
     justify-content: center;
     flex-direction: column;
     width: fit-content;
-    z-index: 99;
+    z-index: 999;
+    &.d-none{
+        display: none;
+    }
     .for-web {
         margin: 25px 0px 0px;
     }
@@ -71,14 +74,14 @@
         align-items: flex-start;
         justify-content: flex-start;
         flex-wrap: wrap;
-        margin: 30px -10px;
+        margin: 30px -10px 72px;
         .btn {
             margin: 15px;
             width: 375px;
         }
     }
     .feature-card-list {
-        padding: 80px 0px;
+        padding: 72px 0px;
     }
     .feature-card {
         border-radius: 16px;
@@ -639,6 +642,7 @@
             line-height: 0.9;
         }
         .buttons-cover {
+
             .btn{
                 width: 100%;
             }
@@ -820,4 +824,72 @@
             }
         }
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider {
+	width: 40rem;
+}
+
+.slide {
+	
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	
+}
+
+// Styling the default Slick dots
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	
+	margin: 0;
+	padding: 1rem 0;
+	
+	list-style-type: none;
+	
+		li {
+			margin: 0 0.25rem;
+		}
+	
+		button {
+			display: block;
+			width: 1rem;
+			height: 1rem;
+			padding: 0;
+			
+			border: none;
+			border-radius: 100%;
+			background-color: blue;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			background-color: red;
+		}
+	
 }
